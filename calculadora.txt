@@ -1,0 +1,35 @@
+
+
+function calculadora() {
+  let n1 = parseInt(prompt("digite o primeiro numero :  "));
+  let n2 = parseInt(prompt("digite o segundo numero:  "));
+  let operacao = parseInt(prompt("digite a operação desejada:\n 1 - soma: \n  2 - subtração; \n 3 - multiplicacão; \n 4 - divisão: \n  0 - sair :\n "));
+  
+  while (operacao != 0) {
+    if (operacao === 1) {
+      console.log(" o valor da soma e :" + (n1 + n2));
+    } else if (operacao === 2) {
+      console.log(" o valor da subtracao e :" + (n1 - n2))
+
+    } else if (operacao === 3) {
+      console.log("o valor da multiplicacão e :" + (n1 * n2));
+    } else if (operacao === 4) {
+      console.log("o valor da divisão e " + (n1 / n2));
+    } else {
+      console.log(" operacao invalida por favor repita os numero e escolha a operação certa");
+      calculadora();
+    }
+    let sair = prompt("sair ?");
+    if (sair == "sim") {
+      operacao = 0;
+      console.log(" saindo...............................................");
+    } else if (sair == "nao") {
+
+      calculadora();
+    }
+     }
+
+ console.log(" saindo...............................................");
+
+}
+calculadora();
